@@ -13,7 +13,7 @@ Native alt yapısı kullanılarak çizgi karakterleri tanıtan bir uygulama haz�
 
 ![2](https://github.com/Umut-jpg/RickAndMorty/assets/77737561/dc8f4c4c-4bb6-4361-8311-5fd2ad84567d width=200 )
 
-<img src="https://github.com/Umut-jpg/RickAndMorty/assets/77737561/dc8f4c4c-4bb6-4361-8311-5fd2ad84567d " alt="Resim Adı" width="200" height="150">
+<img src="https://github.com/Umut-jpg/RickAndMorty/assets/77737561/dc8f4c4c-4bb6-4361-8311-5fd2ad84567d " alt="Resim Adı" width="1000" height="1000">
 
 ![1](https://github.com/Umut-jpg/RickAndMorty/assets/77737561/299be2e3-7fcd-4586-a519-938dc7d26fda)
 
