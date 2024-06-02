@@ -11,13 +11,13 @@ Native alt yapısı kullanılarak çizgi karakterleri tanıtan bir uygulama haz�
   npm install
 ```
 
-- API araclığı ile gelen tüm bölümlere ait veriler uygulamanın ana ekranında pagination(sayfalama) şeklinde listelenmelidir
+-  https://rickandmortyapi.com/api/episode API araclığı ile gelen tüm bölümlere ait veriler uygulamanın ana ekranında pagination(sayfalama) şeklinde listelenmelidir
 
 - Her bir listeleme için search(arama) işlemi de yapabiliyor olmalı
 
-- Herhangi bir bölümün üzerine tıklandığında o bölüme ait API ye istek atılmalı ve bölüme ait gelen bilgiler uygulama üzerinde gösterilmelidir.
+-  https://rickandmortyapi.com/api/episode/8 Herhangi bir bölümün üzerine tıklandığında o bölüme ait API ye istek atılmalı ve bölüme ait gelen bilgiler uygulama üzerinde gösterilmelidir.
 
-- Açılan bölüm sayfasında bölümde bulunan karakterler listelenmeli ve karaktere tıklandığında karakter ile ilgili bilgiler API aracılığı ile alarak ekrana dökülmelidir
+-  https://rickandmortyapi.com/api/character/1  Açılan bölüm sayfasında bölümde bulunan karakterler listelenmeli ve karaktere tıklandığında karakter ile ilgili bilgiler API aracılığı ile alarak ekrana dökülmelidir
 
 - Pagination işlemi Component olarak oluşturulup, kullanılmalıdır.
 
@@ -25,6 +25,8 @@ Native alt yapısı kullanılarak çizgi karakterleri tanıtan bir uygulama haz�
 
 - Maksimum 10 karakter favori olarak eklenebilir. Favori karakter sayısı 10’u geçtiğinde kullanıcıya “Favori karakter ekleme sayısını aştınız. Başka bir karakteri favorilerden çıkarmalısınız.” bildirimi gösterilmelidir. (Local Notification)
 - Favori karakterleri Redux / Toolkit ve AsyncStorage kullanarak state yönetimi işlemleride yapılmalıdır
+- Favori karakterlerin listelendiği Favori Karakterler sayfası olmalıdır. Bu sayfada Silbutonu yer almalıdır. Silme işlemi yapılmak istendiğinde kullanıcıya “... isimli karakterifavorilerden kaldırmak istediğinize emin misiniz?” sorusu sorulmalıdır. Evet seçeneğiseçildiğinde karakter listeden silinerek güncel liste ekranda gösterilmelidir. Hayır seçeneği seçildiğinde herhangi bir işlem yapılmasına gerek yoktur.
+
 
 <img src="https://github.com/Umut-jpg/RickAndMorty/assets/77737561/dc8f4c4c-4bb6-4361-8311-5fd2ad84567d " alt="Resim Adı" width="400" height="900">
 
