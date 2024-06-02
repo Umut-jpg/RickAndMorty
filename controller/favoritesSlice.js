@@ -6,7 +6,7 @@ const loadFavorites = async () => {
     const jsonValue = await AsyncStorage.getItem('favorites');
     return jsonValue != null ? JSON.parse(jsonValue) : [];
   } catch (e) {
-    console.error('Error loading favorites from AsyncStorage', e);
+    console.error(e);
     return [];
   }
 };
@@ -15,7 +15,7 @@ const saveFavorites = async (favorites) => {
     const jsonValue = JSON.stringify(favorites);
     await AsyncStorage.setItem('favorites', jsonValue);
   } catch (e) {
-    console.error('Error saving favorites to AsyncStorage', e);
+    console.error(e);
   }
 };
 
@@ -33,7 +33,7 @@ export const favoritesSlice = createSlice({
         state.characters.push(action.payload);
         saveFavorites(state.characters);
       } else {
-        alert('Favori karakter ekleme sayısını aştınız. Başka bir karakteri favorilerden çıkarmalısınız.');
+        alert('Favori karakter ekleme sayısını aştınız. Başka bir karakteri favorilerdençıkarmalısınız');
       }
     },
     removeFavorite: (state, action) => {

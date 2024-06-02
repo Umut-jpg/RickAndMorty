@@ -15,7 +15,7 @@ export const Favcharacters = () => {
       <Text style={styles.characterName}>{item.name}</Text>
       <TouchableOpacity
         style={styles.removeButton}
-        onPress={() => {Alert.alert("Karakteri Sil","Bu karakteri silmek istediğinize emin misiniz?",
+        onPress={() => {Alert.alert("Karakteri Sil",`${item.name} isimli karakteri favorilerden kaldırmak istediğinize emin misiniz?`,
         [{
         text: "İptal",
         style: "cancel"

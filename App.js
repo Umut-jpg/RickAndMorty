@@ -31,9 +31,9 @@ const NavStack = () => {
   return (
     <NavigationContainer>
       <Tab.Navigator 
-        tabBarOptions={{
+        screenOptions={{
           // tabBarStyle: { height: height*0.1}, tabBarItemStyle: { width: 120 },  
-          labelStyle: { fontSize: 16 } 
+          tabBarLabelStyle: { fontSize: 16 }
         }}>
         <Tab.Screen name="ANA SAYFA" component={NavStack} options={{ headerShown: false }} />
         <Tab.Screen name="FAV KARAKTERLERİM" component={Favcharacters}  />
