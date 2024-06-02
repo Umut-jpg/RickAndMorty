@@ -11,7 +11,7 @@ Native alt yapısı kullanılarak çizgi karakterleri tanıtan bir uygulama haz�
   npm install
 ```
 
-![2](https://github.com/Umut-jpg/RickAndMorty/assets/77737561/dc8f4c4c-4bb6-4361-8311-5fd2ad84567d)
+![2](https://github.com/Umut-jpg/RickAndMorty/assets/77737561/dc8f4c4c-4bb6-4361-8311-5fd2ad84567d width=200 )
 
 
 
