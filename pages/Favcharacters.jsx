@@ -2,8 +2,8 @@ import React from 'react';
 import { View, Text, FlatList, Image, StyleSheet, ImageBackground ,TouchableOpacity,Alert} from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
 import {  removeFavorite } from '../controller/favoritesSlice';
-import image from '../assets/back.jpg'
-
+import image from '../assets/back4.jpg'
+import { height ,width } from '../helper/Helper';
 
 export const Favcharacters = () => {
   const myFavChar = useSelector((state) => state.favorites.characters);
@@ -54,10 +54,10 @@ const styles = StyleSheet.create({
     textAlign:'center',margin:20,
   },
   characterContainer: {
-    flexDirection: 'row',width:400,marginVertical: 10,
+    flexDirection: 'row',width:width*0.8,marginVertical: 10,marginLeft:30
   },
   characterImage: {
-    width: 100,height: 100,marginRight: 10,
+    width: width*0.3,height: height*0.14,marginRight: 10,
   },
   characterName: {
     fontSize: 18,fontWeight: 'bold',marginRight:10,color:'white'
@@ -65,7 +65,7 @@ const styles = StyleSheet.create({
   emptyText: {
     fontSize: 18,color: 'gray',
   },removeButton: {
-    backgroundColor: 'lightblue',paddingVertical: 5,paddingHorizontal: 10,borderRadius: 5,height:30,width:50,
+    backgroundColor: 'lightblue',paddingVertical: 5,paddingHorizontal: 10,borderRadius: 5,height:height*0.05,width:width*0.12,
   },buttonText:{textAlign:'center',justifyContent:'center'
   }
 });

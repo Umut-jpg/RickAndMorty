@@ -1,7 +1,7 @@
 import React  from 'react'
 import {StyleSheet,  Text, View,Image, ScrollView,ImageBackground} from 'react-native';
-import image from '../assets/back.jpg'
-
+import image from '../assets/back3.jpg'
+import { height ,width } from '../helper/Helper';
 export const Characterdetail = ({route}) => {
     const characterDetail = route.params;
     const episodeNumbers = characterDetail.charactersData.episode.map(url => {
@@ -40,7 +40,7 @@ export const Characterdetail = ({route}) => {
                             </Text>
                             <Text style={styles.info}>
                                 <Text style={{color:'lightblue'}}>Bölümler : </Text>
-                                <Text style= {{color:'white'}}>{episodeNumbers}</Text>
+                                <Text style= {{color:'white'}}>{episodeNumbers + ','}</Text>
                             </Text>
                             <Image style={styles.characterImage} source={{ uri: characterDetail.charactersData.image }}
                             />
@@ -57,7 +57,7 @@ const styles = StyleSheet.create (
             alignItems: 'center', justifyContent: 'center',marginTop:50, flex: 1,
     },
         characterImage:{
-            width:300,height:300,marginTop:20,marginBottom:50,
+            width:width*0.7,height:height*0.3,marginTop:20,marginBottom:50,
         },
         info:{
             fontSize: 18,fontWeight:'bold', marginTop: 10,marginBottom:10,

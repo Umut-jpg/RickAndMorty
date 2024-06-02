@@ -2,8 +2,9 @@ import React ,{ useState, useEffect }  from 'react'
 import {StyleSheet,  Text, View,Image, TouchableOpacity,Button , ImageBackground,FlatList} from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
 import { addFavorite } from '../controller/favoritesSlice';
-import image from '../assets/back.jpg'
+import image from '../assets/back3.jpg'
 import { Pagination } from '../components/Pagination';
+import { height } from '../helper/Helper';
 
 export const Epdetail = ({ route, navigation }) => {
 
@@ -59,7 +60,7 @@ const handleAddFavorite = (character) => {
   dispatch(addFavorite(character));
 };
 
-  
+
   return (
     
     <View style={{ flex: 1 }}>
@@ -79,6 +80,8 @@ const handleAddFavorite = (character) => {
           <Text style={{color:'white'}}>{episode.episode.air_date}</Text>
         </Text>
       </View>
+      <Text style={{color:'white', fontWeight:'bold',marginBottom:5,fontSize:20,textAlign:'center',marginTop:15}}>BÖLÜM KARAKTERLERİ</Text>
+
       <Pagination totalPages={totalPages} currentPage={page} onPageChange={handlePageChange} />
 
       <View style={{ flex: 1 , alignItems:'center' ,width:400}}>
@@ -105,7 +108,7 @@ const handleAddFavorite = (character) => {
               </View>
             </TouchableOpacity>
           )}
-           contentContainerStyle={{ flexGrow: 1 }}
+          // contentContainerStyle={{ flexGrow: 1 }}
         />
       </View>
     </ImageBackground>
@@ -121,9 +124,9 @@ const styles = StyleSheet.create({
     fontSize: 18, fontWeight:'bold', marginTop: 2, marginBottom:2, borderBottomEndRadius:20
   },
   characterImage: {
-    width: 250, height: 150, marginBottom: 10,marginRight:1
+    height:height *0.2, marginBottom: 10,marginRight:1,aspectRatio: 2 / 1,
 },characterContainerIn:{
-  margin:10
+  marginRight:50,justifyContent:'center',alignItems:'center' ,marginBottom:7
 },headertext:{
   fontSize: 35, fontWeight:'bold', color:'lightblue',fontStyle:'italic' ,borderWidth:1 , 
   borderRadius:200,padding:20,borderColor:'lightblue' ,margin:10

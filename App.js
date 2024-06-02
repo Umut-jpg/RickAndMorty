@@ -9,7 +9,6 @@ import { Favcharacters } from './pages/Favcharacters';
 import { store } from './controller/store';
 import { initializeFavorites } from './controller/favoritesSlice';
 import { Provider, useDispatch } from 'react-redux';
-
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
 
@@ -26,7 +25,6 @@ const NavStack = () => {
       <Stack.Screen name="ANASAYFA" component={Home} options={{ headerShown: false }} />
       <Stack.Screen name="BÖLÜM DETAY" component={Epdetail} />
       <Stack.Screen name="KARAKTER DETAY" component={Characterdetail} />
-      <Stack.Screen name="FAV KARAKTERLERİM" component={Favcharacters} />
     </Stack.Navigator>
   );
 };
@@ -34,12 +32,11 @@ const NavStack = () => {
     <NavigationContainer>
       <Tab.Navigator 
         tabBarOptions={{
-          tabBarStyle: { height: 120 }, // Tab çubuğunun yüksekliğini belirler
-          tabBarItemStyle: { width: 120 }, // Her bir tab elemanının genişliğini belirler
-          labelStyle: { fontSize: 16 } // Yazı boyutunu ayarlar
+          // tabBarStyle: { height: height*0.1}, tabBarItemStyle: { width: 120 },  
+          labelStyle: { fontSize: 16 } 
         }}>
-        <Tab.Screen name="ANASAYFA" component={NavStack} options={{ headerShown: false }} />
-        <Tab.Screen name="FAV KARAKTERLERİM" component={Favcharacters} options={{ headerShown: false }} />
+        <Tab.Screen name="ANA SAYFA" component={NavStack} options={{ headerShown: false }} />
+        <Tab.Screen name="FAV KARAKTERLERİM" component={Favcharacters}  />
       </Tab.Navigator>
     </NavigationContainer>
   );
