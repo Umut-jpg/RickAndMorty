@@ -28,12 +28,20 @@ Native alt yapısı kullanılarak çizgi karakterleri tanıtan bir uygulama haz�
 - Favori karakterlerin listelendiği Favori Karakterler sayfası olmalıdır. Bu sayfada Silbutonu yer almalıdır. Silme işlemi yapılmak istendiğinde kullanıcıya “... isimli karakterifavorilerden kaldırmak istediğinize emin misiniz?” sorusu sorulmalıdır. Evet seçeneğiseçildiğinde karakter listeden silinerek güncel liste ekranda gösterilmelidir. Hayır seçeneği seçildiğinde herhangi bir işlem yapılmasına gerek yoktur.
 
 
-<img src="https://github.com/Umut-jpg/RickAndMorty/assets/77737561/dc8f4c4c-4bb6-4361-8311-5fd2ad84567d " alt="Resim Adı" width="400" height="900">
 
-<img src="https://github.com/Umut-jpg/RickAndMorty/assets/77737561/299be2e3-7fcd-4586-a519-938dc7d26fda " alt="Resim Adı" width="400" height="900">
 
-<img src="https://github.com/Umut-jpg/RickAndMorty/assets/77737561/2db1d2c4-2a72-441e-a473-8786ff7e207d " alt="Resim Adı" width="400" height="900">
+<img src="https://github.com/Umut-jpg/RickAndMorty/assets/77737561/21eb666a-d367-4fad-8ab8-b48abada0b74 " alt="Resim Adı" width="400" height="900">
 
-<img src="https://github.com/Umut-jpg/RickAndMorty/assets/77737561/81298132-c0b5-43cd-8515-7be9512ef5dd" alt="Resim Adı" width="400" height="900">
+<img src="https://github.com/Umut-jpg/RickAndMorty/assets/77737561/8985e9af-fc34-415d-9f46-1d88bc444f6d " alt="Resim Adı" width="400" height="900">
+
+<img src="https://github.com/Umut-jpg/RickAndMorty/assets/77737561/1a175341-2716-4bf4-913b-ee7e0f7f9dd8 " alt="Resim Adı" width="400" height="900">
+
+<img src="https://github.com/Umut-jpg/RickAndMorty/assets/77737561/296902a7-3b5b-4068-ba60-d082503195c5" alt="Resim Adı" width="400" height="900">
+
+<img src="https://github.com/Umut-jpg/RickAndMorty/assets/77737561/10bae3dc-99ca-49de-8cf3-718795da65ac" alt="Resim Adı" width="400" height="900">
+
+<img src="https://github.com/Umut-jpg/RickAndMorty/assets/77737561/86df66bf-3cdd-4283-809d-2c85b454256d" alt="Resim Adı" width="400" height="900">
+
+<img src="https://github.com/Umut-jpg/RickAndMorty/assets/77737561/702803e2-d457-4e2e-9394-5a80b701d249" alt="Resim Adı" width="400" height="900">
 
 
