@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, FlatList, Image, StyleSheet, ImageBackground ,TouchableOpacity,Alert} from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
 import {  removeFavorite } from '../controller/favoritesSlice';
-import image from '../assets/back4.jpg'
+import image from '../assets/back7.jpg'
 import { height ,width } from '../helper/Helper';
 
 export const Favcharacters = () => {
@@ -23,7 +23,7 @@ export const Favcharacters = () => {
         text: "Sil",
         onPress: () => dispatch(removeFavorite(item.id))}
         ])}}>
-        <Text style={styles.buttonText}>Sil</Text>
+        <Text style={styles.buttonText}>X</Text>
       </TouchableOpacity>
     </View>
   );
@@ -54,7 +54,9 @@ const styles = StyleSheet.create({
     textAlign:'center',margin:20,
   },
   characterContainer: {
-    flexDirection: 'row',width:width*0.8,marginVertical: 10,marginLeft:30
+    flexDirection: 'row',width:width*0.9,marginVertical: 10,marginLeft:15,padding:20,
+    borderBlockColor: 'lightblue',borderWidth: 1,borderRadius: 10,backgroundColor: 'lightblue',opacity:0.8,justifyContent:'space-around'
+
   },
   characterImage: {
     width: width*0.3,height: height*0.14,marginRight: 10,

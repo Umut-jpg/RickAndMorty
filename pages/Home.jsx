@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { FlatList, StyleSheet, Text, View, TouchableOpacity,  ImageBackground, SafeAreaView,TextInput } from 'react-native';
+import { FlatList, StyleSheet, Text, View, TouchableOpacity,  ImageBackground, SafeAreaView,TextInput,Image } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { Pagination } from '../components/Pagination';
-import image from '../assets/back.jpg'
+import image from '../assets/back5.jpg'
 import { height ,width } from '../helper/Helper';
 const Home = () => {
     const [data, setData] = useState([]);
@@ -66,55 +66,91 @@ const Home = () => {
 
 
     return (
-    <View style={styles.container}>
-        <ImageBackground source={image} resizeMode="cover" style={{justifyContent:'center' , flex:1}}>
-           <Text style={styles.headertext}>RICK AND MORTY</Text>
-           <Pagination totalPages={totalPages} currentPage={page} onPageChange={handlePageChange} />
-           <TextInput
-                    style={styles.textInputStyle}
-                    onChangeText={(text) => searchFilter(text)}
-                    value={search}
-                    underlineColorAndroid="transparent"
-                    placeholder="Arama..."
+        <View style={styles.container}>
+          <ImageBackground source={image} resizeMode="cover" style={{ justifyContent: 'center', flex: 1 }}>
+            <Text style={styles.headertext}>RICK AND MORTY</Text>
+            <Pagination totalPages={totalPages} currentPage={page} onPageChange={handlePageChange} />
+            <TextInput
+              style={styles.textInputStyle}
+              onChangeText={(text) => searchFilter(text)}
+              value={search}
+              underlineColorAndroid="transparent"
+              placeholder="Arama..."
             />
-          <FlatList
+            <FlatList
               data={currentPageData}
               keyExtractor={(item) => item.id.toString()}
               renderItem={({ item }) => (
-                  <TouchableOpacity onPress={() => handleEpisodePress(item)}>
-                    <View style ={styles.liststyle}>
-                        <Text style={{color:'red'}} >{item.episode}</Text>
-                        <Text  style = {{fontSize:20}}>{item.name}</Text>
-                        <Text style= {{fontSize:15 , fontWeight:'bold'}}>{item.air_date}</Text>           
-                    </View>       
-                  </TouchableOpacity>
+                <TouchableOpacity onPress={() => handleEpisodePress(item)}>
+                  <View style={styles.liststyle}>
+                    <Image
+                      source={require('../assets/ic.png')}
+                      style={styles.icon}
+                    />
+                    <View style={styles.textContainer}>
+                      <Text style={{ color: 'red' }}>{item.episode}</Text>
+                      <Text style={{ fontSize: 20 }}>{item.name}</Text>
+                      <Text style={{ fontSize: 15, fontWeight: 'bold' }}>{item.air_date}</Text>
+                    </View>
+                  </View>
+                </TouchableOpacity>
               )}
             />
-        </ImageBackground>
-    </View>
-    );
-};
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,paddingTop: 22,
+          </ImageBackground>
+        </View>
+      );
+    };
+    
+    const styles = StyleSheet.create({
+      container: {
+        flex: 1,
+        
       },
-    liststyle:{
-        alignItems:'center',padding: 5,borderRadius: 10,borderColor: 'lightblue',backgroundColor:'lightblue',
-        opacity:0.8,marginTop: 20,borderWidth: 1,width: width*1,fontSize: 18,height:height*0.15,
-    },
-    headertext: {
-        textAlign: 'center',color:'lightblue',fontWeight:'bold',fontStyle:'italic',borderWidth:1,borderRadius:200,
-        padding:20,borderColor:'lightblue',marginTop: 50,fontSize: 35,
-    },
-    footer: {
-        padding: 10,justifyContent: 'center',alignItems: 'center',
-    },
-    textInputStyle: {
-        height: height*0.05,borderWidth: 1,paddingLeft: 20,margin: 5,borderRadius:150,borderColor: 'lightblue',backgroundColor: 'lightblue',
-    },
-});
+      liststyle: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        padding: 10,
+        marginLeft: width * 0.05,
+        borderRadius: 10,
+        borderColor: 'lightblue',
+        backgroundColor: 'lightblue',
+        opacity: 0.8,
+        marginTop: 20,
+        borderWidth: 1,
+        width: width * 0.9, 
+        height: height * 0.15,
+      },
+      headertext: {
+        textAlign: 'center',
+        color: 'lightblue',
+        fontWeight: 'bold',
+        fontStyle: 'italic',
+        borderWidth: 1,
+        borderRadius: 200,
+        padding: 20,
+        borderColor: 'lightblue',
+        marginTop: 50,
+        fontSize: 35,
+      },
+      textInputStyle: {
+        height: height * 0.05,
+        borderWidth: 1,
+        paddingLeft: 20,
+        margin: 5,
+        borderRadius: 150,
+        borderColor: 'lightblue',
+        backgroundColor: 'lightblue',
+         
+      },
+      icon: {
+        width: 50, 
+        height: 50, 
+        resizeMode: 'contain',
+        marginRight: 10,
+      },
+      textContainer: {
+        flex: 1, 
+      },
+    });
 
-export default Home;
-
-
+    export default Home;

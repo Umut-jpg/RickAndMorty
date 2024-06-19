@@ -9,6 +9,8 @@ import { Favcharacters } from './pages/Favcharacters';
 import { store } from './controller/store';
 import { initializeFavorites } from './controller/favoritesSlice';
 import { Provider, useDispatch } from 'react-redux';
+import { Image,StatusBar} from 'react-native';
+
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
 
@@ -22,21 +24,57 @@ const AppInner = () => {
 const NavStack = () => {
   return (
     <Stack.Navigator>
+        
       <Stack.Screen name="ANASAYFA" component={Home} options={{ headerShown: false }} />
-      <Stack.Screen name="BÖLÜM DETAY" component={Epdetail} />
-      <Stack.Screen name="KARAKTER DETAY" component={Characterdetail} />
+      <Stack.Screen name="BÖLÜM DETAY" component={Epdetail}   options={{
+          headerTitle: 'Bölüm Detayları',
+          headerStyle: { backgroundColor: 'lightblue' },  
+        }}/>
+      <Stack.Screen name="KARAKTER DETAY" component={Characterdetail} options={{
+          headerTitle: 'Karakter Detayları',
+          
+          headerStyle: { backgroundColor: 'lightblue' },  
+        }}/>
+         
     </Stack.Navigator>
   );
 };
   return (
+    
     <NavigationContainer>
+         
       <Tab.Navigator 
+       
         screenOptions={{
           // tabBarStyle: { height: height*0.1}, tabBarItemStyle: { width: 120 },  
-          tabBarLabelStyle: { fontSize: 16 }
+          tabBarLabelStyle: { fontSize: 9 },
+          tabBarStyle: { backgroundColor: 'lightblue' },
+        
         }}>
-        <Tab.Screen name="ANA SAYFA" component={NavStack} options={{ headerShown: false }} />
-        <Tab.Screen name="FAV KARAKTERLERİM" component={Favcharacters}  />
+        <Tab.Screen name="ANA SAYFA" component={NavStack} options=
+        {{ headerShown: false ,
+          tabBarIcon: ({ color,  }) => (
+            <Image
+              source={require('./assets/home.png')}
+              style={{ width: 15, height: 20, tintColor: color }}
+            />
+          ),
+
+          
+        }} 
+        />
+        <Tab.Screen name="Favorilerim" component={Favcharacters} 
+          options={{
+            headerTitle: 'Favori Karakterlerim',
+          
+            headerStyle: { backgroundColor: 'lightblue' },  
+            tabBarIcon: ({  color }) => (
+              <Image
+                source={require('./assets/fav.png')}
+                style={{ width: 15, height: 20, tintColor: color }}
+              />
+            ),
+          }}/>
       </Tab.Navigator>
     </NavigationContainer>
   );
